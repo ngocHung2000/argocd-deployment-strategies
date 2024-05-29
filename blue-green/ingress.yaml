@@ -15,3 +15,5 @@ spec:
             name: rollout-bluegreen-active
             port:
               number: 5000
+---
+hello world
