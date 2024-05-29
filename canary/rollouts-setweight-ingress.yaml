@@ -15,4 +15,3 @@ spec:
             name: rollouts-setweight
             port:
               number: 5000
----
