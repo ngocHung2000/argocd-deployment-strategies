@@ -15,7 +15,7 @@ spec:
       containers:
       - name: blue-green
         image: ngochung1809/blue-green:latest
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         env:
         - name: html_name
           value: "app-v1.html"
