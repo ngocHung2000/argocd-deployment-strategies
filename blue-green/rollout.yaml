@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: blue-green
-        image: docker.io/ngochung1809/blue-green:latest
+        image: ngochung1809/blue-green:latest
         imagePullPolicy: Never
         env:
         - name: html_name
