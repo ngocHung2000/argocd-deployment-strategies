@@ -1,0 +1,9 @@
+apiVersion: v2
+name: charts-app
+description: Chart for example web app
+type: application
+maintainers: # (optional)
+  - name: hungtn
+    email: tongochung1809@gmail.com
+version: 0.1.0
+appVersion: latest
