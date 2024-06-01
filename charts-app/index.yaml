@@ -3,9 +3,9 @@ entries:
   charts-app:
   - apiVersion: v2
     appVersion: latest
-    created: "2024-06-01T21:09:40.31206605+07:00"
+    created: "2024-06-01T21:16:23.778538655+07:00"
     description: Chart for example web app
-    digest: 94e86821c2b788903d4860a36e10b479b85b06952cfd3cfb7cdc53655453fa4d
+    digest: 09f87bb2ec8517961837706247b305cfadd542ab9d172780fc81fc86692a0d79
     maintainers:
     - email: tongochung1809@gmail.com
       name: hungtn
@@ -14,4 +14,4 @@ entries:
     urls:
     - releases/charts-app-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-01T21:09:40.30793265+07:00"
+generated: "2024-06-01T21:16:23.774183755+07:00"
