@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: {{ .Release.Name }}-job
   annotations:
-    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook: PostSync
 spec:
   template:
     spec:
