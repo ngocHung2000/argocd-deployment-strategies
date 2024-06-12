@@ -10,8 +10,6 @@ spec:
       containers:
       - name: notification
         image: alpine:latest
-        script: |
-          #!/bin/sh
-          echo "Sync Successful"
+        command: ["echo", "Sync Successful"]
       restartPolicy: Never
   backoffLimit: 5
