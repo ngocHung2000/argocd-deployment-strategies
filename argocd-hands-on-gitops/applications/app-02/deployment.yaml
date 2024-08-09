@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue-green-deployment
+  name: app-02
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: blue-green-deployment
+      app: app-02
   template:
     metadata:
       labels:
-        app: blue-green-deployment
+        app: app-02
     spec:
       containers:
       - name: blue-green
@@ -25,11 +25,11 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: rollout-bluegreen-active
+  name: app-02-svc
 spec:
   type: NodePort
   selector:
-    app: blue-green-deployment
+    app: app-02
   ports:
   - protocol: TCP
     port: 5000
