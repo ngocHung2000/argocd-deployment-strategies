@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-02
+  namespace: argocd
+spec:
+  destination:
+    namespace: app
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/your-username/your-repo.git
+    targetRevision: HEAD
+    path: argocd-hands-on-gitops/applications/app-02
+  project: cicd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

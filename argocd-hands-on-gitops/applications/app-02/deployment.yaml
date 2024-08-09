@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-green-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blue-green-deployment
+  template:
+    metadata:
+      labels:
+        app: blue-green-deployment
+    spec:
+      containers:
+      - name: blue-green
+        image: ngochung1809/blue-green:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: html_name
+          value: "app-v2.html"
+        ports:
+        - containerPort: 5000
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: rollout-bluegreen-active
+spec:
+  type: NodePort
+  selector:
+    app: blue-green-deployment
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
