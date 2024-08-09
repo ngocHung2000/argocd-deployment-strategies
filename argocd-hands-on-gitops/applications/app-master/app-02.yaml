@@ -8,8 +8,8 @@ spec:
     namespace: app
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/your-username/your-repo.git
-    targetRevision: HEAD
+    repoURL: git@github.com:ngocHung2000/argocd-deployment-strategies.git
+    targetRevision: master
     path: argocd-hands-on-gitops/applications/app-02
   project: cicd
   syncPolicy:
